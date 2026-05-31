@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
 import Link from "next/link"
 import { ArrowDown, Download, Shield, Target, Award, TrendingUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -98,12 +97,10 @@ export function HeroSection() {
               {/* Decorative ring */}
               <div className="absolute -inset-4 rounded-full bg-primary/20 blur-xl" />
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-border shadow-2xl">
-                <Image
-                  src="/profile.png"
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/profile.png`}
                   alt="Mohammad Elhajj Ali"
-                  fill
-                  className="object-cover object-top"
-                  priority
+                  className="object-cover object-top absolute inset-0 w-full h-full"
                 />
               </div>
             </div>

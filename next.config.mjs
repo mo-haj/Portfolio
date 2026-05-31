@@ -3,6 +3,9 @@ const nextConfig = {
   output: 'export',
   basePath: '/Portfolio',
   assetPrefix: '/Portfolio',
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '/Portfolio',
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
